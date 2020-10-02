@@ -1,0 +1,97 @@
+
+@import "./styles/colors";
+@import "./styles/animate";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.bg-axxes {
+  background: rgb(159,56,19);
+  background: linear-gradient(0deg, rgba(159,56,19,1) 0%, rgba(233,83,29,1) 100%);
+  color: $white;
+}
+
+.text-axxes {
+  color: $primary;
+}
+
+#webslides {
+  &:after {
+    content: 'JOEY COMHAIRE';
+    position: fixed;
+    bottom: 10px;
+    right: 10px;;
+    text-align: right;
+    color: $primary;
+  }
+}
+
+.wrap.aligncenter {
+  h1 {
+    font-size: 5em;
+  }
+}
+
+.intro-slide {
+  .title {
+    width: 80%;
+  }
+}
+
+.charles-darwin {
+  position: absolute;
+  left: 100px;
+  top: 100px;
+  width: 300px;
+}
+
+.shift-business-slide {
+  span {
+    opacity: .8;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: 4em;
+    color: white;
+    
+  }
+
+  .aligncenter {
+    z-index: 9999999;
+  }
+}
+
+.features-slide {
+
+  div {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 0.9em !important;
+  }
+
+  li.animated {
+    background-color: $primary;
+    color: $white;
+  }
+}
+
+.wireframes-slide {
+  .animated {
+    text-decoration: line-through;
+  }
+}

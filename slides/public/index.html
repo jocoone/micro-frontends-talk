@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- SEO -->
+    <title>Micro Frontends: What, Why and How?</title>
+    <meta name="description" content="Micro Frontends: What, Why and How?">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://joeycomhaire.com/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Micro Frontends: What, Why and How?"> 
+    <meta property="og:description" content="Micro Frontends: What, Why and How?"> 
+    <meta property="og:updated_time" content="2020-09-08T17:20:50"> 
+    <meta property="og:image" content="%PUBLIC_URL%/images/share-webslides.jpg"> 
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@jocoone"> 
+    <meta name="twitter:title" content="Micro Frontends: What, Why and How?"> 
+    <meta name="twitter:description" content="Micro Frontends: What, Why and How?"> 
+    <meta name="twitter:image" content="%PUBLIC_URL%/images/share-webslides.jpg"> 
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="%PUBLIC_URL%/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="%PUBLIC_URL%/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="%PUBLIC_URL%/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="%PUBLIC_URL%/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="%PUBLIC_URL%/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="%PUBLIC_URL%/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="%PUBLIC_URL%/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    
+    <script src="%PUBLIC_URL%/webslides.min.js"></script>
+    <script src="%PUBLIC_URL%/webslides-animation.js"></script>
+    <script>
+      setTimeout(function() {
+            window.ws = new WebSlides({
+              changeOnClick: true,
+              navigateOnScroll: 0
+            });
+            new WebSlidesAnimation(window.ws);
+          }, 500)
+    </script>
+  </body>
+</html>

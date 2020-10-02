@@ -1,0 +1,108 @@
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.document-slide {
+  .document-evolution {
+    height: 90vh;
+    width: 100%;
+    transition: transform 2s ease-in;
+
+    &.small {
+      transform: scale(0.2) rotate(55deg) translate(000px, -700px);
+    }
+    
+    &.split {
+      transform: translateX(-400px);
+    }
+  }
+
+  .fa-file-code {
+    font-size: 10em;
+    position: absolute;
+    left: 200px;
+  }
+
+  .server {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    transition: transform 2s ease-in;
+
+    img {
+      width: 750px;
+    }
+    
+    &.split {
+      transform: translateX(400px);
+    }
+
+    &.microservices {
+      transform: scale(0.5) translateX(150px);
+    }
+  }
+
+  .microservices-container {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    height: 100vh;
+    background: 
+      url('./server.png') 100px 300px,
+      url('./server.png') 300px 500px,
+      url('./server.png') 400px 100px,
+      url('./server.png') 50px 50px,
+      url('./server.png') 100px 600px,
+      url('./server.png') 250px 270px,
+      url('./server.png') 400px 350px;
+    background-size: 150px;
+    background-repeat: no-repeat;
+  }
+
+  .lambda-container {
+    position: absolute;
+    right: 0;
+    width: 600px;
+    height: 100vh;
+    background: 
+      url('./aws.svg') 100px 300px,
+      url('./aws.svg') 300px 500px,
+      url('./aws.svg') 400px 100px,
+      url('./aws.svg') 50px 50px,
+      url('./aws.svg') 100px 600px,
+      url('./aws.svg') 400px 700px,
+      url('./aws.svg') 250px 270px,
+      url('./aws.svg') 400px 350px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+  }
+
+  .angular,
+  .react,
+  .vue {
+    width: 75px;
+    position: absolute;
+  }
+
+  .react {
+    animation: infinite-spinning 4s infinite linear;
+    left: 300px;
+    top: 100px;
+  }
+
+  .angular {
+    left: 600px;
+    top: 200px;
+  }
+
+  .vue {
+    left: 430px;
+    top: 400px;
+  }
+}

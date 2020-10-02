@@ -1,0 +1,20 @@
+.animate-show,
+.animate-hide {
+  transition: all .2s ease-out;
+}
+
+.animate-show {
+  display: none;
+  opacity: 0 !important;
+}
+.animate-show.animated {
+  display: block;
+  opacity: 1 !important;
+}
+
+.animate-hide {
+  opacity: 1 !important;
+}
+.animate-hide.animated {
+  opacity: 0 !important;
+}
