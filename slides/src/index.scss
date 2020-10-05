@@ -1,6 +1,7 @@
 
 @import "./styles/colors";
 @import "./styles/animate";
+@import "~bootstrap/scss/bootstrap.scss";
 
 body {
   margin: 0;
@@ -28,12 +29,22 @@ code {
 }
 
 #webslides {
+  &:before {
+    content: '#HaxxConf';
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-weight: bold;
+    color: $primary;
+  }
+
   &:after {
     content: 'JOEY COMHAIRE';
     position: fixed;
     bottom: 10px;
     right: 10px;;
     text-align: right;
+    font-weight: bold;
     color: $primary;
   }
 }
@@ -93,5 +104,226 @@ code {
 .wireframes-slide {
   .animated {
     text-decoration: line-through;
+  }
+}
+
+.highlight {
+  color: $primary;
+}
+
+.custom-elements-slide {
+  .aligncenter.centerify {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .custom-element-container {
+    height: 85vh;
+    width: 85vw;
+    background-color: $primary;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+
+    iframe {
+      width: 100%;
+      height: 100%
+    }
+  }
+}
+
+.custom-elements-slide-2 {
+  .aligncenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .custom-element-container {
+    height: 55vh;
+    width: 55vw;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+
+    iframe {
+      width: 100%;
+      height: 100%
+    }
+  }
+}
+
+.missing-something-slide {
+
+  .wrap {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+    &.animated {
+      .question-mark {
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+
+  .think {
+    span {
+      font-style: normal;
+    }
+  }
+
+  .question-mark {
+    position: absolute;
+    transition: opacity 1s ease;
+    opacity: 0;
+    display: none;
+
+    &:nth-child(1) {
+      top: 30%;
+      left: 40%;
+      transform: rotate(-30deg);
+    }
+
+    &:nth-child(2) {
+      top: 30%;
+      left: 50%;
+      transform: rotate(20deg);
+    }
+
+    &:nth-child(3) {
+      top: 20%;
+      left: 45%;
+    }
+
+    &:nth-child(4) {
+      top: 30%;
+      left: 55%;
+      transform: rotate(10deg);
+    }
+
+    &:nth-child(5) {
+      top: 30%;
+      left: 45%;
+      transform: rotate(-10deg);
+    }
+
+    &:nth-child(6) {
+      top: 20%;
+      left: 50%;
+      transform: rotate(10deg);
+    }
+  }
+}
+
+.demo-slide {
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .demo-container {
+    border-radius: 10px;
+    overflow: scroll;
+    width: 80vw;
+    height: 80vh;
+    display: grid;
+    grid-template-rows: 50px auto 80px; 
+    grid-template-columns: auto auto auto 300px; 
+    grid-template-areas: 
+      "header header header header"
+      "main main main advertisement"
+      "main main main advertisement"
+      "main main main sidebar"
+      "main main main sidebar"
+      "main main main sidebar";
+
+    &.animated {
+      border: 1px solid $primary;
+      box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+    }
+
+    .header {
+      grid-area: header;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .dropdown-item {
+        &:hover, &.active {
+          background-color: #c4032f;
+        }
+      }
+      
+      .form-control {
+        font-size: 1em;
+        border-radius: 3px;
+      }
+
+      &.animated {
+        background-color: #c4032f;
+      }
+    }
+
+    .advertisement {
+      grid-area: advertisement;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 90%;
+      }
+
+      &.animated {
+        background-color: #f0d53a;
+      }
+    }
+
+    .main {
+      grid-area: main;
+
+      &.animated {
+        background-color: #61dafb;
+      }
+    }
+
+    .sidebar {
+      grid-area: sidebar;
+
+      &.animated {
+        background-color: #42b983;
+      }
+    }
+  }
+}
+
+.textShadow {
+  
+}
+
+.clients-slide {
+  font-size: 1.3em;
+
+  img {
+    height: 120px;
+  }
+
+  h3 {
+    font-size: 1.5em !important;
+  }
+}
+
+.me-slide {
+  img {
+    border-radius: 50%;
+    border: 3px solid $primary;
   }
 }

@@ -1,0 +1,44 @@
+.app {
+  width: 100%;
+  padding: 30px 60px;
+  box-sizing: border-box;
+  background-color: white;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.app h1 {
+  text-align: left;
+  margin-top: 0;
+}
+
+.app .hour-block {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.app .hour-block .hour {
+  padding-right: 15px;
+}
+
+.app .hour-block .talks .talk {
+  float: left;
+  text-align: left;
+  font-size: .8em;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 15px 25px;
+  border-radius: 5px; 
+  box-shadow: 4px 10px 42px -13px rgba(41, 33, 33, 0.13);
+  border: 1px solid rgba(41, 33, 33, 0.13);
+}
+
+.app .hour-block .talks .talk:hover {
+  background-color: #61dafb;
+  cursor: pointer;
+}
+
+.app .hour-block .talks .talk h2 {
+  font-size: 1.2em;
+  margin: 0 0 10px 0;
+}
+

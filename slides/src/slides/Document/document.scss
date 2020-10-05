@@ -44,41 +44,40 @@
     }
 
     &.microservices {
-      transform: scale(0.5) translateX(150px);
+      transform: scale(0.5) translateX(20%);
     }
   }
 
   .microservices-container {
     position: absolute;
-    right: 0;
+    right: 10%;
     width: 600px;
     height: 100vh;
     background: 
-      url('./server.png') 100px 300px,
-      url('./server.png') 300px 500px,
-      url('./server.png') 400px 100px,
-      url('./server.png') 50px 50px,
-      url('./server.png') 100px 600px,
-      url('./server.png') 250px 270px,
-      url('./server.png') 400px 350px;
+      url('./server.png') 100px 50%,
+      url('./server.png') 300px 70%,
+      url('./server.png') 400px 55%,
+      url('./server.png') 50px 35%,
+      url('./server.png') 100px 65%,
+      url('./server.png') 250px 55%,
+      url('./server.png') 350px 35%;
     background-size: 150px;
     background-repeat: no-repeat;
   }
 
   .lambda-container {
     position: absolute;
-    right: 0;
+    right: 10%;
     width: 600px;
     height: 100vh;
     background: 
-      url('./aws.svg') 100px 300px,
-      url('./aws.svg') 300px 500px,
-      url('./aws.svg') 400px 100px,
-      url('./aws.svg') 50px 50px,
-      url('./aws.svg') 100px 600px,
-      url('./aws.svg') 400px 700px,
-      url('./aws.svg') 250px 270px,
-      url('./aws.svg') 400px 350px;
+    url('./aws.svg') 100px 50%,
+    url('./aws.svg') 300px 70%,
+    url('./aws.svg') 400px 55%,
+    url('./aws.svg') 50px 35%,
+    url('./aws.svg') 100px 65%,
+    url('./aws.svg') 250px 55%,
+    url('./aws.svg') 350px 35%;
     background-size: 100px;
     background-repeat: no-repeat;
   }
@@ -92,13 +91,13 @@
 
   .react {
     animation: infinite-spinning 4s infinite linear;
-    left: 300px;
-    top: 100px;
+    left: 550px;
+    top: 500px;
   }
 
   .angular {
     left: 600px;
-    top: 200px;
+    top: 300px;
   }
 
   .vue {

@@ -1,5 +1,6 @@
 .animate-show,
-.animate-hide {
+.animate-hide,
+.animate-visible {
   transition: all .2s ease-out;
 }
 
@@ -17,4 +18,12 @@
 }
 .animate-hide.animated {
   opacity: 0 !important;
+}
+
+.animate-visible {
+  opacity: 0;
+
+  &.animated {
+    opacity: 1;
+  }
 }
