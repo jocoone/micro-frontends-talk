@@ -8,5 +8,7 @@
  * If you're not using a React component library,
  * this file can be safely deleted.
  */
-import App from './direflow-components/haxx-schedule/App';
+
+import App from './direflow-components/conference-schedule/App';
+
 export { App };

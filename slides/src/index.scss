@@ -1,7 +1,6 @@
-
-@import "./styles/colors";
-@import "./styles/animate";
-@import "~bootstrap/scss/bootstrap.scss";
+@import './styles/colors';
+@import './styles/animate';
+@import '~bootstrap/scss/bootstrap.scss';
 
 body {
   margin: 0;
@@ -19,8 +18,12 @@ code {
 }
 
 .bg-axxes {
-  background: rgb(159,56,19);
-  background: linear-gradient(0deg, rgba(159,56,19,1) 0%, rgba(233,83,29,1) 100%);
+  background: rgb(159, 56, 19);
+  background: linear-gradient(
+    0deg,
+    rgba(159, 56, 19, 1) 0%,
+    rgba(233, 83, 29, 1) 100%
+  );
   color: $white;
 }
 
@@ -30,22 +33,24 @@ code {
 
 #webslides {
   &:before {
-    content: '#HaxxConf';
+    content: 'Microfrontends';
     position: fixed;
     bottom: 10px;
     left: 10px;
     font-weight: bold;
     color: $primary;
+    font-size: 1.5em;
   }
 
   &:after {
     content: 'JOEY COMHAIRE';
     position: fixed;
     bottom: 10px;
-    right: 10px;;
+    right: 10px;
     text-align: right;
     font-weight: bold;
     color: $primary;
+    font-size: 1.5em;
   }
 }
 
@@ -59,6 +64,35 @@ code {
   .title {
     width: 80%;
   }
+
+  .colossus img {
+    width: 100%;
+  }
+
+  &.lighter {
+    .colossus {
+      opacity: 0.1 !important;
+    }
+  }
+
+  .overlay-alan {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+
+    .alan {
+      width: 40%;
+    }
+
+    .apple {
+      color: white;
+      font-size: 25em;
+    }
+  }
 }
 
 .charles-darwin {
@@ -70,14 +104,13 @@ code {
 
 .shift-business-slide {
   span {
-    opacity: .8;
+    opacity: 0.8;
   }
 
   h1 {
     font-weight: bold;
     font-size: 4em;
     color: white;
-    
   }
 
   .aligncenter {
@@ -86,7 +119,6 @@ code {
 }
 
 .features-slide {
-
   div {
     font-size: 1.2em;
   }
@@ -125,11 +157,10 @@ code {
     background-color: $primary;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+    box-shadow: 4px 10px 42px -13px rgba(0, 0, 0, 0.83);
 
-    iframe {
-      width: 100%;
-      height: 100%
+    img {
+      height: 100%;
     }
   }
 }
@@ -146,17 +177,16 @@ code {
     width: 55vw;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+    box-shadow: 4px 10px 42px -13px rgba(0, 0, 0, 0.83);
 
     iframe {
       width: 100%;
-      height: 100%
+      height: 100%;
     }
   }
 }
 
 .missing-something-slide {
-
   .wrap {
     height: 100vh;
     width: 100vw;
@@ -164,7 +194,7 @@ code {
     align-items: center;
     justify-content: center;
     position: relative;
-    
+
     &.animated {
       .question-mark {
         opacity: 1;
@@ -235,19 +265,19 @@ code {
     width: 80vw;
     height: 80vh;
     display: grid;
-    grid-template-rows: 50px auto 80px; 
-    grid-template-columns: auto auto auto 300px; 
-    grid-template-areas: 
-      "header header header header"
-      "main main main advertisement"
-      "main main main advertisement"
-      "main main main sidebar"
-      "main main main sidebar"
-      "main main main sidebar";
+    grid-template-rows: 50px auto 80px;
+    grid-template-columns: auto auto auto 300px;
+    grid-template-areas:
+      'header header header header'
+      'main main main advertisement'
+      'main main main advertisement'
+      'main main main sidebar'
+      'main main main sidebar'
+      'main main main sidebar';
 
     &.animated {
       border: 1px solid $primary;
-      box-shadow: 4px 10px 42px -13px rgba(0,0,0,0.83);
+      box-shadow: 4px 10px 42px -13px rgba(0, 0, 0, 0.83);
     }
 
     .header {
@@ -257,11 +287,12 @@ code {
       justify-content: flex-end;
 
       .dropdown-item {
-        &:hover, &.active {
+        &:hover,
+        &.active {
           background-color: #c4032f;
         }
       }
-      
+
       .form-control {
         font-size: 1em;
         border-radius: 3px;
@@ -305,8 +336,134 @@ code {
   }
 }
 
-.textShadow {
-  
+.deployments-slide {
+  .database {
+    position: absolute;
+    font-size: 10em;
+    top: 0;
+    left: 100px;
+  }
+
+  .deployments {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+
+    .microfrontenddeployments {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 100px;
+
+      div {
+        width: 200px;
+        height: 200px;
+        transition: all 1s ease-in-out;
+        opacity: 0;
+        border-radius: 10px;
+        transform-origin: 200px 50%;
+
+        &.animated {
+          transform: scale(0.2);
+        }
+
+        &:nth-child(1) {
+          background-color: #f0d53a;
+          transition-delay: 0.5s;
+
+          &.deployed {
+            transform: scale(0.2) translate(-48vw, -100px);
+          }
+        }
+
+        &:nth-child(2) {
+          background-color: #c4032f;
+          transition-delay: 1s;
+
+          &.deployed {
+            transform: scale(0.2) translate(-150vw, -100px);
+          }
+        }
+
+        &:nth-child(3) {
+          background-color: #42b983;
+          transition-delay: 1.5s;
+
+          &.deployed {
+            transform: scale(0.2) translate(-298vw, 150px);
+          }
+        }
+
+        &:nth-child(4) {
+          background-color: #61dafb;
+          transition-delay: 2s;
+
+          &.deployed {
+            transform: scale(0.2) translate(-400vw, 150px);
+          }
+        }
+      }
+
+      &.animated {
+        div {
+          opacity: 1;
+        }
+      }
+    }
+
+    .appshelldeployment {
+      margin: 0 auto;
+
+      .appshell {
+        width: 350px;
+        height: 250px;
+        border-radius: 10px;
+        border: 2px solid $primary;
+        display: grid;
+        grid-template-rows: 30px auto 80px;
+        grid-template-columns: auto auto auto 80px;
+        grid-template-areas:
+          'header header header header'
+          'main main main advertisement'
+          'main main main advertisement'
+          'main main main sidebar'
+          'main main main sidebar'
+          'main main main sidebar';
+
+        .main {
+          grid-area: main;
+
+          &.animated {
+            background-color: #61dafb;
+          }
+        }
+
+        .header {
+          grid-area: header;
+
+          &.animated {
+            background-color: #c4032f;
+          }
+        }
+
+        .sidebar {
+          grid-area: sidebar;
+
+          &.animated {
+            background-color: #42b983;
+          }
+        }
+
+        .advertisement {
+          grid-area: advertisement;
+
+          &.animated {
+            background-color: #f0d53a;
+          }
+        }
+      }
+    }
+  }
 }
 
 .clients-slide {

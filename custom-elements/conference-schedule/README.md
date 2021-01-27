@@ -1,10 +1,11 @@
 This component was bootstrapped with [Direflow](https://direflow.io).
 
-# Haxx Schedule
+# Conference Schedule
+
 > This project is created using Direflow
 
 ```html
-<haxx-schedule></haxx-schedule>
+<conference-schedule></conference-schedule>
 ```
 
 Use this README to describe your Direflow Component

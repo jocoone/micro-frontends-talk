@@ -9,12 +9,11 @@
  * It can be left blank if not needed.
  */
 
-import HaxxSchedule from './direflow-components/haxx-schedule';
+import ConferenceSchedule from './direflow-components/conference-schedule';
 
-HaxxSchedule.then((element) => {
-
+ConferenceSchedule.then((element) => {
   /**
    * Access DOM node when it's mounted
    */
-  console.log('haxx-schedule is mounted on the DOM', element);
+  console.log('conference-schedule is mounted on the DOM', element);
 });

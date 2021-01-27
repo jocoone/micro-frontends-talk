@@ -11,72 +11,72 @@ const TALKS = {
   '09:30': [
     {
       speaker: 'Jensen Somers',
-      name: 'Vertical Slice Architecture'
+      name: 'Vertical Slice Architecture',
     },
     {
       speaker: 'Pauline Depuydt',
-      name: 'About DNA and other magical building blocks of life'
+      name: 'About DNA and other magical building blocks of life',
     },
     {
       speaker: 'Stefaan van Puyvelde',
-      name: '(in)Security'
+      name: '(in)Security',
     },
     {
       speaker: 'Robbe Rothier',
-      name: 'Chaos, mayhem, destruction: my work here is done'
+      name: 'Chaos, mayhem, destruction: my work here is done',
     },
     {
       speaker: 'Mathias Bruggeman - Matthias van den Elsacker - Toon Verbuyst',
-      name: 'IP IP Hoera'
-    }
+      name: 'IP IP Hoera',
+    },
   ],
   '10:40': [
     {
       speaker: 'Pieter-Jan Dergent',
-      name: 'Functional Typescript'
+      name: 'Functional Typescript',
     },
     {
       speaker: 'Kenny Laevaert',
-      name: 'User oriented programming'
+      name: 'User oriented programming',
     },
     {
       speaker: 'Sander Descamps',
-      name: 'Ansible: automation for lazy people'
+      name: 'Ansible: automation for lazy people',
     },
     {
       speaker: 'Birger Anckaert',
-      name: 'Special K'
+      name: 'Special K',
     },
     {
       speaker: 'Tony Mouton',
-      name: 'Value Stream mapping, a visualisation tool used in Lean'
-    }
+      name: 'Value Stream mapping, a visualisation tool used in Lean',
+    },
   ],
   '11:50': [
     {
       speaker: 'Thomas Levefer-Teughels - Thomas van Rhee',
-      name: 'Database performance enhancements'
+      name: 'Database performance enhancements',
     },
     {
       speaker: 'Sam De Bock',
-      name: 'React in 2020'
+      name: 'React in 2020',
     },
     {
       speaker: 'Georges Del Favero',
-      name: 'DBATools.io'
+      name: 'DBATools.io',
     },
     {
       speaker: 'Bavo De Waele',
-      name: 'Steping into the blockchain - DAPPS'
+      name: 'Steping into the blockchain - DAPPS',
     },
     {
       speaker: 'Annabel Greeve',
-      name: 'Our branding is alive!'
-    }
-  ]
-}
+      name: 'Our branding is alive!',
+    },
+  ],
+};
 
-const App: FC<IProps> = ({componentTitle, talks}) => {
+const App: FC<IProps> = ({ componentTitle, talks }) => {
   const renderTalks = Object.keys(talks).map((hour: string) => (
     <div className="hour-block">
       <div className="hour">{hour}</div>
@@ -93,9 +93,9 @@ const App: FC<IProps> = ({componentTitle, talks}) => {
 
   return (
     <Styled styles={styles}>
-      <div className='app'>
+      <div className="app">
         <h1>{componentTitle}</h1>
-        <div className='bottom'>
+        <div className="bottom">
           <div>{renderTalks}</div>
         </div>
       </div>
@@ -104,8 +104,8 @@ const App: FC<IProps> = ({componentTitle, talks}) => {
 };
 
 App.defaultProps = {
-  componentTitle: 'Haxx Schedule',
-  talks: TALKS
-}
+  componentTitle: 'Conference Schedule',
+  talks: TALKS,
+};
 
 export default App;

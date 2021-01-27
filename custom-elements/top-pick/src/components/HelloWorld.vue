@@ -29,7 +29,7 @@
       </div>
     </li>
     <li class="top-pick-item" v-on:click="dispatchEvent('5')">
-      <h1>4.</h1>
+      <h1>5.</h1>
       <div>
         <h2>Using Xamarin in the real world</h2>
         <div>Tom Anckaerts</div>

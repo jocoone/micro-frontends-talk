@@ -3,8 +3,5 @@ import App from './App.vue'
 
 Vue.customElement('app-top-pick', App, {
   shadow: true,
-  shadowCss: `
-  .card {
-     background-color: blue;
-  }`
+  shadowCss: ``
 });

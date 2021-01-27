@@ -1,7 +1,8 @@
-class HaxxSchedule extends HTMLElement {
+class RandomAdvertisement extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = '<iframe src="https://haxx2020.sched.com/"></iframe>';
+    this.innerHTML =
+      '<img src="https://source.unsplash.com/random" alt="random advertisement"/>';
   }
 }
 
-window.customElements.define('haxx-schedule', HaxxSchedule);
+window.customElements.define('custom-advertisement', RandomAdvertisement);
