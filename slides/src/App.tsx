@@ -23,7 +23,6 @@ const me = require('./assets/me_crazy.jpg');
 const titleBlack = require('./assets/title_black.svg');
 const evolution = require('./assets/evolution.png');
 const charles = require('./assets/charlesdarwin.png');
-const movement = require('./assets/movement.jpg');
 const teamsplit = require('./assets/teamsplit.png');
 const teamsplit2 = require('./assets/teamsplit2.png');
 const verticalheadline = require('./assets/verticals-headline.png');
@@ -36,6 +35,8 @@ const ecmascript = require('./assets/ecmascript.png');
 const inception = require('./assets/inception.gif');
 const shadowdom = require('./assets/shadow-dom.png');
 const shadowdom2 = require('./assets/shadowdom2.png');
+const speed = require('./assets/speed.jpeg');
+const bednet = require('./assets/bednet.png');
 
 declare global {
   interface Window {
@@ -47,19 +48,19 @@ declare global {
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
-      'app-search': React.DetailedHTMLProps<
+      'bednet-search': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
-      'app-advertisement': React.DetailedHTMLProps<
+      'bednet-advertisement': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
-      'app-top-pick': React.DetailedHTMLProps<
+      'bednet-chat': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
-      'app-conference-schedule': React.DetailedHTMLProps<
+      'bednet-virtual-classroom': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement>,
         HTMLElement
       >;
@@ -125,6 +126,7 @@ function App() {
     <article id="webslides">
       <span className="author">Joey Comhaire</span>
       <Intro />
+      <Slide background={speed} />
       <Slide className="me-slide">
         <div className="wrap" style={{ display: 'flex' }}>
           <img src={me} alt="me" className="alignleft size-40" />
@@ -138,18 +140,17 @@ function App() {
             <h2 style={{ fontSize: '4em' }}>
               <strong>Joey Comhaire</strong>
             </h2>
-            <h3>
-              <code>Competence Coach</code>
-            </h3>
-            <p style={{ fontSize: '2em', marginTop: '25px' }}>
-              Frontend Enthousiast
-            </p>
-            <p style={{ fontSize: '2em' }}>
-              6 years @ <a href="https://axxes.com">Axxes</a>
-            </p>
-            <p style={{ fontSize: '2em' }}>
-              <strong>"Starting"</strong> Conference speaker
-            </p>
+            <h4>
+              <code>Competence Coach - Fullstack developer</code>
+            </h4>
+            <div style={{ transform: 'translateY(25px)' }}>
+              <p style={{ fontSize: '2em' }}>
+                ~7 years @ <a href="https://axxes.com">Axxes</a>
+              </p>
+              <p style={{ fontSize: '2em', marginTop: '25px' }}>
+                Frontend Enthousiast - <b>Architecture</b>
+              </p>
+            </div>
           </div>
         </div>
       </Slide>
@@ -165,7 +166,7 @@ function App() {
         </div>
       </Slide>
       <DocumentEvolution />
-      <Slide className="fullscreen shift-business-slide" background={movement}>
+      <Slide className="shift-business-slide bg-white">
         <div className="aligncenter">
           <h1 style={{ fontSize: '6em' }}>Shift of Business logic</h1>
         </div>
@@ -186,6 +187,17 @@ function App() {
       <Slide>
         <div className="wrap">
           <img src={titleBlack} alt="title" />
+        </div>
+      </Slide>
+      <Slide
+        className="wireframes-slide"
+        animationId="wireframes"
+        stepCount={1}
+      >
+        <div className="wrap aligncenter">
+          <h1 data-step="1">
+            <strong>Microfrontend Experts</strong>
+          </h1>
         </div>
       </Slide>
       <Slide stepCount={3} animationId="question">
@@ -765,7 +777,7 @@ function App() {
           </ul>
         </div>
       </Slide>
-      <Slide animationId="demo" stepCount={7} className="demo-slide fullscreen">
+      <Slide animationId="demo" stepCount={9} className="demo-slide fullscreen">
         <div className="wrap aligncenter">
           <div className="demo-container" data-step="1">
             <div className="header" data-step="2">
@@ -927,6 +939,32 @@ function App() {
             </a>
           </h2>
         </div>
+      </Slide>
+      <Slide>
+        <iframe
+          style={{ height: '100vh', width: '100vw' }}
+          title="re-factor"
+          src="https://www.re-factor.be/donate"
+        />
+        <img
+          src={bednet}
+          alt="bednet"
+          style={{ position: 'absolute', right: '0' }}
+        />
+        <a
+          href="https://re-factor.be/donate"
+          target="_blank"
+          rel="noreferrer noopener"
+          style={{
+            position: 'absolute',
+            fontSize: '3em',
+            top: '25px',
+            width: '100vw',
+            textAlign: 'center',
+          }}
+        >
+          re-factor.be/donate
+        </a>
       </Slide>
     </article>
   );

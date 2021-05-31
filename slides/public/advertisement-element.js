@@ -6,4 +6,4 @@ class AppAdvertisement extends HTMLElement {
   }
 }
 
-window.customElements.define('app-advertisement', AppAdvertisement);
+window.customElements.define('bednet-advertisement', AppAdvertisement);

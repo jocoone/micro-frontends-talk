@@ -110,7 +110,6 @@ code {
   h1 {
     font-weight: bold;
     font-size: 4em;
-    color: white;
   }
 
   .aligncenter {
@@ -284,7 +283,6 @@ code {
       grid-area: header;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
 
       .dropdown-item {
         &:hover,
@@ -300,6 +298,10 @@ code {
 
       &.animated {
         background-color: #c4032f;
+      }
+
+      bednet-search {
+        width: 100%;
       }
     }
 
@@ -328,9 +330,16 @@ code {
 
     .sidebar {
       grid-area: sidebar;
+      display: flex;
 
       &.animated {
         background-color: #42b983;
+      }
+
+      bednet-chat {
+        display: block;
+        height: 100%;
+        width: 100%;
       }
     }
   }

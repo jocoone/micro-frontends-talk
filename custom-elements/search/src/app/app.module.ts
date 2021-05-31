@@ -10,25 +10,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
     HttpClientModule,
-    NgbTypeaheadModule
+    NgbTypeaheadModule,
   ],
-  providers: [
-    WikipediaService
-  ],
-  bootstrap: [AppComponent]
+  providers: [WikipediaService],
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   constructor(injector: Injector) {
     const myElement = createCustomElement(AppComponent, { injector });
-    customElements.define('app-search', myElement);
+    customElements.define('bednet-search', myElement);
   }
   ngDoBootstrap() {}
 }

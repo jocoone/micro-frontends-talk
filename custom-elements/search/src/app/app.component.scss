@@ -1,1 +1,26 @@
-.form-control { width: 300px; }
+#app-root {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+
+  div {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 35px;
+      margin-right: 25px;
+    }
+
+    h3 {
+      font-size: 1.2em;
+      color: white;
+      font-weight: bold;
+    }
+  }
+}
+
+.form-control {
+  width: 300px;
+}
