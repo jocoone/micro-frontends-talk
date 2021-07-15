@@ -37,6 +37,7 @@ const shadowdom = require('./assets/shadow-dom.png');
 const shadowdom2 = require('./assets/shadowdom2.png');
 const speed = require('./assets/speed.jpeg');
 const bednet = require('./assets/bednet.png');
+const entryslide = require('./assets/entryslide.png');
 
 declare global {
   interface Window {
@@ -124,7 +125,11 @@ function App() {
 
   return (
     <article id="webslides">
-      <span className="author">Joey Comhaire</span>
+      <span className="author animate-show">Joey Comhaire</span>
+      <Slide
+        background={entryslide}
+        className="fullscreen%M=lkjg fdsqqs dgop^"
+      />
       <Intro />
       <Slide background={speed} />
       <Slide className="me-slide">
@@ -663,9 +668,7 @@ function App() {
               </div>
               <div style={{ marginTop: '25px' }}>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <strong className="highlight">
-                  details: &#123; ... &#125;
-                </strong>
+                <strong className="highlight">detail: &#123; ... &#125;</strong>
               </div>
               <div style={{ marginTop: '25px' }}>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -934,8 +937,8 @@ function App() {
             </a>
           </h2>
           <h2 style={{ marginTop: '100px' }}>
-            <a href="https://github.com/jocoone/micro-frontends-talk">
-              https://github.com/jocoone/micro-frontends-talk
+            <a href="https://microfrontends.joeycomhaire.com">
+              https://microfrontends.joeycomhaire.com
             </a>
           </h2>
         </div>
